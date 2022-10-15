@@ -1,11 +1,10 @@
 <ng-container *ngIf="vm$ | async as vm">
 	<div class="wrapper">
-
 		<div class="picker"
-			 [style.backgroundColor]="vm.color">
+			 [style.backgroundColor]="vm.color.hex">
 			<input type="color"
 				   [disabled]="vm.disabled"
-				   [ngModel]="vm.color"
+				   [ngModel]="vm.color.hex"
 				   (blur)="onBlur()"
 				   (ngModelChange)="changeColor($event)" />
 		</div>
@@ -13,9 +12,10 @@
 		<div class="display">
 			<input type="text"
 				   [disabled]="vm.disabled"
-				   [ngModel]="vm.color"
+				   [ngModel]="vm.color.hex"
 				   (ngModelChange)="changeColor($event)" />
-			<span>{{ hexColor$ | async }}</span>
+			<span [style.color]="vm.color">RGB: rgb({{ vm.color.rgb.red }}, {{ vm.color.rgb.green }}, {{ vm.color.rgb.blue }})</span>
+			<span [style.color]="vm.color">Hue: {{ vm.color.hue }}</span>
 		</div>
 	</div>
 </ng-container>

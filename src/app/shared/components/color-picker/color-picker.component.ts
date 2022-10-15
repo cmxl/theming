@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
-import { ColorPickerStore } from './color-picker.store';
+import { Color, ColorPickerStore } from './color-picker.store';
 
 @Component({
 	selector: 'app-color-picker',
@@ -18,20 +18,20 @@ import { ColorPickerStore } from './color-picker.store';
 })
 export class ColorPickerComponent implements ControlValueAccessor {
 
-	private _color?: string = undefined;
+	private _color?: Partial<Color> = {};
 	private onTouched: () => void = () => { };
-	private onChanged: (color: string) => void = () => { };
+	private onChanged: (color: Color) => void = () => { };
 
 	constructor(
 		private componentStore: ColorPickerStore
-	) { }
+	) {
+	}
 
 	readonly vm$ = this.componentStore.vm$;
-	readonly hexColor$ = this.componentStore.hexColor$;
 
-	writeValue(color: string): void {
-		if (this._color !== color)
-			this.componentStore.changeColor(color);
+	writeValue(color: Color): void {
+		if (this._color !== color && color != null)
+			this.componentStore.changeColor({ hex: color.hex, rgb: color.rgb, callback: () => { } });
 	}
 
 	registerOnChange(fn: any): void {
@@ -43,9 +43,8 @@ export class ColorPickerComponent implements ControlValueAccessor {
 	}
 
 	changeColor(color: string): void {
-		if (this._color !== color) {
-			this.componentStore.changeColor(color);
-			this.onChanged(color);
+		if (this._color?.hex !== color) {
+			this.componentStore.changeColor({ hex: color, rgb: { red: 0, green: 0, blue: 0 }, callback: this.onChanged })
 		}
 	}
 

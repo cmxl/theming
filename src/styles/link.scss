@@ -1,0 +1,37 @@
+a.link {
+	--color: var(--text-color);
+	color: rgb(var(--color));
+
+	&:hover {
+		color: rgba(var(--color), 0.7);
+	}
+
+
+	&.primary {
+		--color: var(--primary-color);
+	}
+
+	&.secondary {
+		--color: var(--secondary-color);
+	}
+
+	&.accent {
+		--color: var(--accent-color);
+	}
+
+	&.info {
+		--color: var(--info-color);
+	}
+
+	&.success {
+		--color: var(--success-color);
+	}
+
+	&.warn {
+		--color: var(--warning-color);
+	}
+
+	&.error {
+		--color: var(--error-color);
+	}
+}

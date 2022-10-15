@@ -1,4 +1,6 @@
 @import './styles/theme.scss';
+@import './styles/button.scss';
+@import './styles/link.scss';
 
 body,
 app-root {
@@ -7,23 +9,7 @@ app-root {
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
-	color: #292929;
 	font-size: 14px;
-}
-
-.page {
-	flex: 1;
-}
-
-.dark-theme {
-	background-color: var(--primary-color);
-
-	* {
-		color: var(--secondary-color);
-	}
-}
-
-.light-theme {
-	background-color: var(--primary-color);
-	color: var(--secondary-color);
+	background-color: rgb(var(--base-color));
+	color: rgb(var(--text-color));
 }
