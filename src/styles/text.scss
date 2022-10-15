@@ -1,0 +1,59 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+section,
+label,
+em {
+
+	&.text {
+
+		--color: var(--text-color);
+
+		color: rgb(var(--color));
+
+		&.primary {
+			--color: var(--primary-color);
+		}
+
+		&.secondary {
+			--color: var(--secondary-color);
+		}
+
+		&.accent {
+			--color: var(--accent-color);
+		}
+
+		&.info {
+			--color: var(--info-color);
+		}
+
+		&.success {
+			--color: var(--success-color);
+		}
+
+		&.warn {
+			--color: var(--warn-color);
+		}
+
+		&.error {
+			--color: var(--error-color);
+		}
+
+	}
+
+
+}

@@ -8,10 +8,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ThemePage } from './pages/theme.page';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({
-	declarations: [AppComponent],
+	declarations: [AppComponent, ThemePage],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,

@@ -1,0 +1,69 @@
+<div class="wrapper">
+	<div class="colors">
+		<h3>Primary</h3>
+		<app-color-picker [(ngModel)]="primary"
+						  (ngModelChange)="changeColor($event, 'primary')"></app-color-picker>
+
+		<h3>Secondary</h3>
+		<app-color-picker [(ngModel)]="secondary"
+						  (ngModelChange)="changeColor($event, 'secondary')"></app-color-picker>
+
+		<h3>Accent</h3>
+		<app-color-picker [(ngModel)]="accent"
+						  (ngModelChange)="changeColor($event, 'accent')"></app-color-picker>
+
+		<h3>Neutral</h3>
+		<app-color-picker [(ngModel)]="neutral"
+						  (ngModelChange)="changeColor($event, 'neutral')"></app-color-picker>
+		<h3>Base Color</h3>
+		<app-color-picker [(ngModel)]="base"
+						  (ngModelChange)="changeColor($event, 'base')"></app-color-picker>
+		<h3>Info</h3>
+		<app-color-picker [(ngModel)]="info"
+						  (ngModelChange)="changeColor($event, 'info')"></app-color-picker>
+		<h3>Success</h3>
+		<app-color-picker [(ngModel)]="success"
+						  (ngModelChange)="changeColor($event, 'success')"></app-color-picker>
+		<h3>Warning</h3>
+		<app-color-picker [(ngModel)]="warn"
+						  (ngModelChange)="changeColor($event, 'warn')"></app-color-picker>
+		<h3>Error</h3>
+		<app-color-picker [(ngModel)]="error"
+						  (ngModelChange)="changeColor($event, 'error')"></app-color-picker>
+	</div>
+	<div class="examples">
+		<div>
+			<h1 *ngFor="let color of colors"
+				[ngClass]="['text', color]">Headline 1</h1>
+		</div>
+		<div>
+			<h2 *ngFor="let color of colors"
+				[ngClass]="['text', color]">Headline 2</h2>
+		</div>
+		<div>
+			<h3 *ngFor="let color of colors"
+				[ngClass]="['text', color]">Headline 3</h3>
+		</div>
+		<div>
+			<h4 *ngFor="let color of colors"
+				[ngClass]="['text', color]">Headline 4</h4>
+		</div>
+		<div>
+			<h5 *ngFor="let color of colors"
+				[ngClass]="['text', color]">Headline 5</h5>
+		</div>
+		<div>
+			<h6 *ngFor="let color of colors"
+				[ngClass]="['text', color]">Headline 6</h6>
+		</div>
+		<div>
+			<a *ngFor="let color of colors"
+			   href="#"
+			   [ngClass]="['link', color]">This is a link</a>
+		</div>
+		<div>
+			<button *ngFor="let color of colors"
+					[ngClass]="['btn', color]">Click Me!</button>
+		</div>
+	</div>
+</div>

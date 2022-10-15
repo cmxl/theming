@@ -12,7 +12,7 @@ button.btn {
 	text-transform: var(--button-text-case);
 	padding: 5px;
 	font-weight: bold;
-
+	cursor: pointer;
 
 	&.primary {
 		--background-color: var(--primary-color);
@@ -38,12 +38,23 @@ button.btn {
 
 	&.warn {
 		--color: var(--base-color);
-		--background-color: var(--warning-color);
+		--background-color: var(--warn-color);
 	}
 
 	&.error {
 		--color: var(--base-color);
 		--background-color: var(--error-color);
+	}
+
+	&.disabled,
+	&.disabled:active,
+	&.disabled:focus {
+		--background-color: 60, 60, 60;
+		--color: var(--text-color);
+		cursor: not-allowed;
+		user-select: none;
+		border-style: initial;
+		outline: none;
 	}
 
 }

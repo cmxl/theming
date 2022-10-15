@@ -28,10 +28,22 @@ a.link {
 	}
 
 	&.warn {
-		--color: var(--warning-color);
+		--color: var(--warn-color);
 	}
 
 	&.error {
 		--color: var(--error-color);
+	}
+
+	&.disabled,
+	&.disabled:active,
+	&.disabled:focus {
+		color: rgb(var(--text-color));
+		text-decoration: line-through;
+		text-decoration-color: rgb(var(--color));
+		cursor: not-allowed;
+		user-select: none;
+		border-style: initial;
+		outline: none;
 	}
 }
