@@ -1,31 +1,17 @@
-<app-password-input [placeholder]="'Passwort'"
-					[color]="color"
-					[(ngModel)]="password"></app-password-input>
+<header>
+	<h1>Headline</h1>
+</header>
 
-<app-password-input [placeholder]="'Passwort'"
-					[color]="color"
-					[(ngModel)]="password"></app-password-input>
 
-<app-password-input [placeholder]="'Passwort'"
-					[color]="color"
-					[(ngModel)]="password"></app-password-input>
+<div class="page">
+	<app-color-picker [(ngModel)]="backgroundColor"
+					  (ngModelChange)="changeBackground($event)"></app-color-picker>
+	<app-color-picker [(ngModel)]="color"
+					  (ngModelChange)="changeColor($event)"></app-color-picker>
+	<router-outlet></router-outlet>
+</div>
 
-<app-password-input [placeholder]="'Passwort'"
-					[color]="color"
-					[(ngModel)]="password"></app-password-input>
 
-<app-password-input [placeholder]="'Passwort'"
-					[color]="color"
-					[(ngModel)]="password"></app-password-input>
-
-<app-password-input [placeholder]="'Passwort'"
-					[color]="color"
-					[(ngModel)]="password"></app-password-input>
-
-<app-password-input [placeholder]="'Passwort'"
-					[color]="color"
-					[(ngModel)]="password"></app-password-input>
-<input [(ngModel)]="color"
-	   type="color" />
-
-<router-outlet></router-outlet>
+<footer>
+	<span>NGRX Components &copy; 2022</span>
+</footer>

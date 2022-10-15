@@ -1,0 +1,21 @@
+<ng-container *ngIf="vm$ | async as vm">
+	<div class="wrapper">
+
+		<div class="picker"
+			 [style.backgroundColor]="vm.color">
+			<input type="color"
+				   [disabled]="vm.disabled"
+				   [ngModel]="vm.color"
+				   (blur)="onBlur()"
+				   (ngModelChange)="changeColor($event)" />
+		</div>
+
+		<div class="display">
+			<input type="text"
+				   [disabled]="vm.disabled"
+				   [ngModel]="vm.color"
+				   (ngModelChange)="changeColor($event)" />
+			<span>{{ hexColor$ | async }}</span>
+		</div>
+	</div>
+</ng-container>

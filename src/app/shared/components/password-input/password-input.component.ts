@@ -20,7 +20,7 @@ export class PasswordInputComponent implements ControlValueAccessor {
 
 	private _password?: string = undefined;
 	private onTouched: () => void = () => { };
-	private onChanged: (password: string) => void = (password) => { };
+	private onChanged: (password: string) => void = () => { };
 
 	@Input() set color(color: string) {
 		this.componentStore.changeColor(color);
