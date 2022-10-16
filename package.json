@@ -1,6 +1,10 @@
 {
 	"name": "theming",
-	"version": "0.0.0",
+	"version": "1.0.0",
+	"author": {
+		"name": "Tobias Haimerl",
+		"url": "https://www.noobit.dev"
+	},
 	"scripts": {
 		"ng": "ng",
 		"start": "ng serve",
