@@ -1,12 +1,22 @@
 <header>
 	<h1>Theming</h1>
+	<p class="text">
+		This sample project uses <a href="https://ngrx.io"
+		   class="link info">ngrx</a> to handle color changes in <em class="text accent">CSS variables</em>.
+		Some minor <em class="text accent">SCSS</em> scripts are being used to do a little theming.
+	</p>
+	<p class="text">
+		Color variables are saved as a pseudo rgb format, i.e. <code><em class="text error">red</em>, <em class="text success">green</em>, <em class="text info">blue</em></code> without declaring it as a color.
+	</p>
 </header>
 
 <div class="page">
+
 	<router-outlet></router-outlet>
 </div>
 
 
 <footer>
-	<span>NGRX Components &copy; 2022</span>
+	<span><a href="https://www.noobit.dev"
+		   class="link info">cmxl</a> &copy; {{ now | date:'yyyy'}}</span>
 </footer>
