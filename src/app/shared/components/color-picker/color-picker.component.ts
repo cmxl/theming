@@ -27,7 +27,7 @@ export class ColorPickerComponent implements ControlValueAccessor {
 	) {
 	}
 
-	readonly vm$ = this.componentStore.vm$;
+	readonly vm$ = this.componentStore.state$;
 
 	writeValue(color: Color): void {
 		if (this._color !== color && color != null)

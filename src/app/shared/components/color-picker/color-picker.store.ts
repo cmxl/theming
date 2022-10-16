@@ -98,7 +98,4 @@ export class ColorPickerStore extends ComponentStore<ColorPickerState> {
 			})
 		)
 	);
-
-	readonly vm$ = this.select((state) => state);
-
 }

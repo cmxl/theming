@@ -15,7 +15,6 @@ export class PasswordInputStore extends ComponentStore<PasswordInputState> {
 		super({ hide: true, placeholder: '', password: '', color: '#000000' });
 	}
 
-	readonly vm$ = this.select((state) => state);
 	readonly password$ = this.select((state) => state.password);
 
 	readonly togglePassword = this.updater((state) => ({ ...state, hide: !state.hide }));

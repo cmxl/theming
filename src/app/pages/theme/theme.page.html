@@ -71,5 +71,14 @@
 			<button *ngFor="let color of colors"
 					[ngClass]="['btn', color]">Click Me!</button>
 		</div>
+
+		<div>
+			<app-checkbox *ngFor="let color of colors"
+						  [(ngModel)]="checked"
+						  [color]="color">Check me out</app-checkbox>
+		</div>
+		<div>
+			<span class="text info">Checkbox [(ngModel)] => {{ checked }}</span>
+		</div>
 	</div>
 </div>

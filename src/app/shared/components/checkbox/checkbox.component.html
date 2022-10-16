@@ -1,0 +1,18 @@
+<ng-container *ngIf="vm$ | async as vm">
+	<div class="checkbox"
+		 (blur)="onBlur()"
+		 (click)="toggleChecked(vm.checked)">
+		<div [ngClass]="['cb', color, vm.disabled ? 'disabled' : '']"
+			 *ngIf="!vm.checked"></div>
+		<div [ngClass]="['cb', color, vm.disabled ? 'disabled' : '', 'checked']"
+			 *ngIf="vm.checked">
+			&check;
+		</div>
+		<span *ngIf="vm.text"
+			  [ngClass]="['text', color]">{{ vm.text }}</span>
+		<span *ngIf="!vm.text"
+			  [ngClass]="['text', color]">
+			<ng-content></ng-content>
+		</span>
+	</div>
+</ng-container>

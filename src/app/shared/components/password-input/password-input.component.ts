@@ -52,7 +52,7 @@ export class PasswordInputComponent implements ControlValueAccessor {
 		this.onTouched();
 	}
 
-	readonly vm$ = this.componentStore.vm$;
+	readonly vm$ = this.componentStore.state$;
 
 	togglePassword(): void {
 		this.componentStore.togglePassword();
