@@ -1,34 +1,40 @@
-<div class="wrapper">
+<div class="wrapper"
+	 *ngIf="vm$ | async as vm">
 	<div class="colors">
 		<h3>Primary</h3>
-		<app-color-picker [(ngModel)]="primary"
+		<app-color-picker [ngModel]="vm.primary"
 						  (ngModelChange)="changeColor($event, 'primary')"></app-color-picker>
 
 		<h3>Secondary</h3>
-		<app-color-picker [(ngModel)]="secondary"
+		<app-color-picker [ngModel]="vm.secondary"
 						  (ngModelChange)="changeColor($event, 'secondary')"></app-color-picker>
 
 		<h3>Accent</h3>
-		<app-color-picker [(ngModel)]="accent"
+		<app-color-picker [ngModel]="vm.accent"
 						  (ngModelChange)="changeColor($event, 'accent')"></app-color-picker>
 
 		<h3>Neutral</h3>
-		<app-color-picker [(ngModel)]="neutral"
+		<app-color-picker [ngModel]="vm.neutral"
 						  (ngModelChange)="changeColor($event, 'neutral')"></app-color-picker>
+
 		<h3>Base Color</h3>
-		<app-color-picker [(ngModel)]="base"
+		<app-color-picker [ngModel]="vm.base"
 						  (ngModelChange)="changeColor($event, 'base')"></app-color-picker>
+
 		<h3>Info</h3>
-		<app-color-picker [(ngModel)]="info"
+		<app-color-picker [ngModel]="vm.info"
 						  (ngModelChange)="changeColor($event, 'info')"></app-color-picker>
+
 		<h3>Success</h3>
-		<app-color-picker [(ngModel)]="success"
+		<app-color-picker [ngModel]="vm.success"
 						  (ngModelChange)="changeColor($event, 'success')"></app-color-picker>
+
 		<h3>Warning</h3>
-		<app-color-picker [(ngModel)]="warn"
+		<app-color-picker [ngModel]="vm.warn"
 						  (ngModelChange)="changeColor($event, 'warn')"></app-color-picker>
+
 		<h3>Error</h3>
-		<app-color-picker [(ngModel)]="error"
+		<app-color-picker [ngModel]="vm.error"
 						  (ngModelChange)="changeColor($event, 'error')"></app-color-picker>
 	</div>
 	<div class="examples">
